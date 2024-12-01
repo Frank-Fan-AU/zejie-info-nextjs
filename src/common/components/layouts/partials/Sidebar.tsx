@@ -3,6 +3,7 @@
 //import useIsMobile from '@/common/hooks/useIsMobile';
 
 import Breakline from '../../elements/Breakline';
+import ThemeSwitch from '../../elements/ThemeSwitch';
 // import SearchBox from '../../elements/SearchBox';
 // import ThemeSwitcher from '../../elements/ThemeSwitcher';
 import Navigation from '../../sidebar/Navigation';
@@ -44,7 +45,7 @@ const Sidebar = () => {
             <div className='px-3'>
               <span className='text-sm text-neutral-600'>Theme</span>
             </div>
-            {/* <ThemeSwitcher /> */}
+           <ThemeSwitch/>
           </div>
         </div>
       )}

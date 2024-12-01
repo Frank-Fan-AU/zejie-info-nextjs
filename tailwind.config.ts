@@ -1,7 +1,11 @@
+import {nextui} from '@nextui-org/theme';
 import scrollbarHide from 'tailwind-scrollbar-hide';
 
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -52,5 +56,5 @@ module.exports = {
       },
     },
   },
-  plugins: [scrollbarHide],
+  plugins: [scrollbarHide,nextui()],
 };
