@@ -1,4 +1,7 @@
+import Breakline from '@/common/components/elements/Breakline';
 import Container from '@/common/components/elements/Container';
+import Introduction from '@/common/components/elements/Introduction';
+import SkillsSection from './about/_compontents/SkillsSection';
 
 
 export default function Home() {
@@ -6,7 +9,9 @@ export default function Home() {
     <>
 
     <Container data-aos='fade-up'>
-      <h1>Home</h1>
+      <Introduction/>
+      <Breakline className='mb-7 mt-8' />
+      <SkillsSection />
     </Container>
   </>
   );

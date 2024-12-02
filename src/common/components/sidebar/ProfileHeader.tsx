@@ -21,7 +21,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
     >
       <Image
         src='/images/avator.png'
-        alt='Ryan Aulia'
+        alt='Zejie Fan'
         width={expandMenu ? 80 : imageSize}
         height={expandMenu ? 80 : imageSize}
         rounded='rounded-full'
@@ -34,8 +34,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
             ZeJie
           </h2>
         </Link>
-      <Tooltip title='aws'> <VerifiedIcon size={18} className='text-blue-400' /> </Tooltip>
-          
+          <img src="/images/awsDev.png" alt="aws Certified" width={18} height={18} />
     
       </div>
       <div className='hidden lg:flex text-xs font-sora text-neutral-600 hover:text-neutral-700 dark:text-neutral-500 dark:hover:text-neutral-400 transition-all duration-300'>
