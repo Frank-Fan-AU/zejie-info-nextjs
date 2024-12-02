@@ -12,6 +12,7 @@ const Tag = memo(({ icon, title }: { icon: ReactNode; title: string }) => (
     <span>{title}</span>
   </div>
 ));
+Tag.displayName = 'Tag';
 
 const Skills = () => {
   const [stacksArray, setStacksArray] = useState<Array<[string, ReactNode]>>([]);
