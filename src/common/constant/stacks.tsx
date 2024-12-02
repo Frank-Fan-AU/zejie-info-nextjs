@@ -1,4 +1,4 @@
-import { BsFillBootstrapFill, BsRobot } from 'react-icons/bs';
+import { BsFillBootstrapFill } from 'react-icons/bs';
 import { DiJava } from 'react-icons/di';
 import { LiaElementor } from 'react-icons/lia';
 
