@@ -99,7 +99,13 @@ export const UI_STACKS: stacksProps = {
   />
   ),
   'Element UI': (
-    <LiaElementor size={iconSize} className='text-purple-500' />
+    <img 
+    src="/icons/ElementUI.png" 
+    alt="ElementUI" 
+    width={iconSize} 
+    height={iconSize}
+    style={{ display: 'inline' }}
+  />
   ),
   Echarts: (
     <SiApacheecharts size={iconSize} className='text-[#AA344D]' />
