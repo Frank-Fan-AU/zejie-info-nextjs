@@ -2,7 +2,7 @@ import { PROJECT_ITEMS } from "@/common/constant/project";
 import Container from "@/common/components/elements/Container";
 import PageHeading from "@/common/components/elements/PageHeading";
 import BackButton from "@/common/components/elements/BackButton";
-import ProjectDetail from "../_compontents/ProjectDetail";
+import ProjectDetail from "../_components/ProjectDetail";
 
 
 

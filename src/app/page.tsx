@@ -1,7 +1,7 @@
 import Breakline from '@/common/components/elements/Breakline';
 import Container from '@/common/components/elements/Container';
 import Introduction from '@/common/components/elements/Introduction';
-import SkillsSection from './about/_compontents/SkillsSection';
+import SkillsSection from './about/_components/SkillsSection';
 
 
 export default function Home() {

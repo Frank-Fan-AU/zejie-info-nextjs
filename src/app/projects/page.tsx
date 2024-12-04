@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { NextSeo } from 'next-seo';
 import { PROJECT_ITEMS } from '@/common/constant/project';
 
-import Projects from './_compontents/Projects';
+import Projects from './_components/Projects';
 import PageHeading from '@/common/components/elements/PageHeading';
 import Container from '@/common/components/elements/Container';
 
