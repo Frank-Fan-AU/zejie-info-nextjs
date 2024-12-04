@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-
+import { NextSeo } from 'next-seo';
 import { PROJECT_ITEMS } from '@/common/constant/project';
 
 import Projects from './_compontents/Projects';
@@ -25,7 +25,9 @@ const Project = () => {
 
 
   return (
-    <Container data-aos='fade-up'>
+    <>
+      <NextSeo title={`${PAGE_TITLE} - Zejie Fan`}  description={PAGE_DESCRIPTION} />
+      <Container data-aos='fade-up'>
         <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
         <Projects
           projects={projects.slice(0, visibleProjects)}
@@ -33,6 +35,7 @@ const Project = () => {
           hasMore={hasMore}
         />
       </Container>
+    </>
   );
 };
 
