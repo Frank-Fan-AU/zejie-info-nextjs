@@ -5,11 +5,12 @@ import { MDXRemote } from 'next-mdx-remote/rsc'; // 使用next-mdx-remote来处�
 import Image from '@/common/components/elements/Image';
 //import MDXComponent from '@/common/components/elements/MDXComponent';
 import Tooltip from '@/common/components/elements/Tooltip';
-import { STACKS } from '@/common/constant/stacks';
+import { STACKS, BACKEND_STACKS ,UI_STACKS} from '@/common/constant/stacks';
 import { ProjectItemProps } from '@/common/types/projects';
+import MDXComponent from '@/common/components/elements/MDXComponent';
 
 // import ProjectLink from './ProjectLink';
-
+const ALL_STACKS = {...STACKS, ...BACKEND_STACKS, ...UI_STACKS};
 const ProjectDetail = ({
   title,
   image,
@@ -21,7 +22,6 @@ const ProjectDetail = ({
     const stacksArray = stacks.split(',');
     const docDir = path.join(process.cwd(), 'src', 'projectContent');
     const filePath = path.join(docDir, `${slug}.mdx`);
-    console.log(filePath);
     const source = fs.readFileSync(filePath, 'utf8');
     const { content, data } = matter(source);
   return (
@@ -34,7 +34,7 @@ const ProjectDetail = ({
           <div className='flex flex-wrap items-center gap-3'>
             {stacksArray?.map((stack: string, index: number) => (
               <div key={index}>
-                <Tooltip title={stack}>{STACKS[stack]}</Tooltip>
+                <Tooltip title={stack}>{ALL_STACKS[stack]}</Tooltip>
               </div>
             ))}
           </div>
@@ -54,8 +54,8 @@ const ProjectDetail = ({
       />
       {content && (
         <div className='mt-5 space-y-6 leading-[1.8] dark:text-neutral-300'>
-          {/* <MDXComponent>{content}</MDXComponent> */}
-          <MDXRemote source={content} />
+          <MDXComponent>{content}</MDXComponent>
+          {/* <MDXRemote source={content} /> */}
         </div>
       )}
     </div>

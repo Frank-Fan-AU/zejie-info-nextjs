@@ -5,8 +5,11 @@ import { HiOutlineArrowSmRight as ViewIcon } from 'react-icons/hi';
 import Card from '@/common/components/elements/Card';
 import Image from '@/common/components/elements/Image';
 import Tooltip from '@/common/components/elements/Tooltip';
-import { STACKS } from '@/common/constant/stacks';
+import { STACKS, BACKEND_STACKS ,UI_STACKS} from '@/common/constant/stacks';
 import { ProjectItemProps } from '@/common/types/projects';
+
+
+const ALL_STACKS = {...STACKS, ...BACKEND_STACKS, ...UI_STACKS};
 
 const ProjectCard = ({
   title,
@@ -52,7 +55,7 @@ const ProjectCard = ({
           <div className='flex flex-wrap items-center gap-3 pt-2'>
             {stacksArray?.map((stack: string, index: number) => (
               <div key={index}>
-                <Tooltip title={stack}>{STACKS[stack]}</Tooltip>
+                <Tooltip title={stack}>{ALL_STACKS[stack]}</Tooltip>
               </div>
             ))}
           </div>

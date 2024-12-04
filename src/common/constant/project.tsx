@@ -4,11 +4,11 @@ export const PROJECT_ITEMS: ProjectItemProps[] = [
   {
     title: "visa-dashboard",
     slug: "visa-dashboard",
-    description: "使用 Next.js 14 和 TypeScript 构建的个人网站，具有响应式设计和暗色模式支持",
+    description: "Tracking visa progress and sharing visa-related information, offering insights, guides, and community support.",
     image: "/images/projectImages/visa-dashoard.png",
     link_demo: "https://visadashboard.top",
     link_github: "https://github.com/yourusername/personal-website",
-    stacks: "Next.js,TypeScript,Tailwind CSS,Vercel",
+    stacks: "Next.js,TypeScript,TailwindCSS,MongoDB,AwsAmplify,Amazon S3",
     content: "这是一个使用最新技术栈构建的个人网站，展示了我的项目经历和技术博客。",
     is_show: true,
     is_featured: true,
