@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import { BsFillBootstrapFill } from 'react-icons/bs';
 import { DiJava } from 'react-icons/di';
-import { LiaElementor } from 'react-icons/lia';
 
 import {
 
@@ -90,7 +90,7 @@ export const UI_STACKS: stacksProps = {
     style={{ display: 'inline' }}
   />),
   'Ant Design': (
-    <img 
+    <Image 
     src="/icons/antd.png" 
     alt="antd" 
     width={iconSize} 
@@ -99,7 +99,7 @@ export const UI_STACKS: stacksProps = {
   />
   ),
   'Element UI': (
-    <img 
+    <Image
     src="/icons/ElementUI.png" 
     alt="ElementUI" 
     width={iconSize} 
@@ -112,7 +112,7 @@ export const UI_STACKS: stacksProps = {
   ),
 
   'AntV|G6': (
-    <img 
+    <Image
       src="/icons/g6.png" 
       alt="AntV" 
       width={iconSize} 

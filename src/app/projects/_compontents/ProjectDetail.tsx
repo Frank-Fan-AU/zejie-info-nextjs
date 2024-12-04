@@ -1,9 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { MDXRemote } from 'next-mdx-remote/rsc'; // 使用next-mdx-remote来处理mdx文件
 import Image from '@/common/components/elements/Image';
-//import MDXComponent from '@/common/components/elements/MDXComponent';
+
 import Tooltip from '@/common/components/elements/Tooltip';
 import { STACKS, BACKEND_STACKS ,UI_STACKS} from '@/common/constant/stacks';
 import { ProjectItemProps } from '@/common/types/projects';
@@ -23,7 +22,7 @@ const ProjectDetail = ({
     const docDir = path.join(process.cwd(), 'src', 'projectContent');
     const filePath = path.join(docDir, `${slug}.mdx`);
     const source = fs.readFileSync(filePath, 'utf8');
-    const { content, data } = matter(source);
+    const { content } = matter(source);
   return (
     <div className='space-y-8'>
       <div className='flex flex-col items-start justify-between gap-5 sm:flex-row lg:flex-row lg:items-center'>
@@ -55,7 +54,6 @@ const ProjectDetail = ({
       {content && (
         <div className='mt-5 space-y-6 leading-[1.8] dark:text-neutral-300'>
           <MDXComponent>{content}</MDXComponent>
-          {/* <MDXRemote source={content} /> */}
         </div>
       )}
     </div>
