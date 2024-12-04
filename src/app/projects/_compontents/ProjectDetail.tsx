@@ -9,7 +9,7 @@ import { STACKS, BACKEND_STACKS ,UI_STACKS} from '@/common/constant/stacks';
 import { ProjectItemProps } from '@/common/types/projects';
 import MDXComponent from '@/common/components/elements/MDXComponent';
 
-// import ProjectLink from './ProjectLink';
+import ProjectLink from './ProjectLink';
 const ALL_STACKS = {...STACKS, ...BACKEND_STACKS, ...UI_STACKS};
 const ProjectDetail = ({
   title,
@@ -39,11 +39,11 @@ const ProjectDetail = ({
             ))}
           </div>
         </div>
-        {/* <ProjectLink
+        <ProjectLink
           title={title}
           link_demo={link_demo}
           link_github={link_github}
-        /> */}
+        />
       </div>
       <Image
         src={image}
