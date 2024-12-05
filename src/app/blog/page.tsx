@@ -1,29 +1,17 @@
-
 import Container from '@/common/components/elements/Container';
 import client from '@/common/libs/contentful/client';
+import BlogCardNew from './_components/BlogCardNew';
+import { getBlogItems } from '@/common/libs/blog';
+import { getAllPosts } from '@/common/libs/api';
 
 
-interface BlogPost {
-    fields: {
-        title: string;
-        slug: string;
-        author: any;
-        excerpt: string;
-        coverImage: any;
-        content: any;
-    };
-    sys: {
-        id: string;
-    };
-    contentTypeId: string;
-}
+
 
 const Blog = async() => {
-  console.log(process.env.CONTENTFUL_ACCESS_TOKEN);
   // 从 Contentful 获取博客文章
-  const { items } = await client.getEntries<BlogPost>({ content_type: 'blog' });
+  const allPosts = await getAllPosts(false);
 
-  console.log(items);
+  console.log(allPosts);
     return (
         <>
       
@@ -31,14 +19,12 @@ const Blog = async() => {
             {/* <BlogListNew /> */}
             <div>
       <h1>博客文章</h1>
-      <ul>
-        {items.map((item) => (
-          <li key={item.sys.id}>
-            <h2>{item.fields.title}</h2>
-            <p>{item.fields.excerpt}</p>
-          </li>
-        ))}
-      </ul>
+      {/* {allPosts.map((item,index) => (
+        <BlogCardNew 
+          key={index} 
+          {...item}
+        />
+      ))} */}
     </div>
           </Container>
         </>
