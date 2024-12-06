@@ -18,7 +18,7 @@ const Blog = async() => {
           <Container className='xl:!-mt-5' data-aos='fade-up'>
             {/* <BlogListNew /> */}
             <div>
-      <h1>博客文章</h1>
+      <h1>blog developing... I will use contentful to get the posts</h1>
       {/* {allPosts.map((item,index) => (
         <BlogCardNew 
           key={index} 

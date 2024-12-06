@@ -21,6 +21,10 @@ const Introduction = () => {
           working on interesting projects and exploring new technologies. I work with TypeScript and
           specialize in all-things web. I thrive on collaborating with teams to
           deliver efficient, scalable, and visually appealing web applications.
+          
+        </p>
+        <p className='mt-4 leading-[1.8] text-neutral-800 dark:text-neutral-300 md:leading-loose'>
+        I am currently learning Web3 technologies and aspire to pursue a career in Web3 development. If you have entry-level Web3 development opportunities, feel free to reach out to me.
         </p>
       </section>
     );

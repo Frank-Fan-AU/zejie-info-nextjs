@@ -77,16 +77,16 @@ export const MENU_ITEMS: MenuItemProps[] = [
       isExternal: false,
       eventName: 'Pages: Contact',
       type: 'Pages',
-    },
-    {
-      title: 'Guestbook',
-      href: '/guestbook',
-      icon: <ChatIcon size={iconSize} />,
-      isShow: true,
-      isExternal: false,
-      eventName: 'Pages: Chat',
-      type: 'Pages',
-    },
+    }
+    // {
+    //   title: 'Guestbook',
+    //   href: '/guestbook',
+    //   icon: <ChatIcon size={iconSize} />,
+    //   isShow: true,
+    //   isExternal: false,
+    //   eventName: 'Pages: Chat',
+    //   type: 'Pages',
+    // },
   ];
 
 export const MENU_APPS: MenuItemProps[] = [
