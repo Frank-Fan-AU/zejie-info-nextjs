@@ -32,7 +32,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
             ZeJie
           </h2>
         </Link>
-          <img src="/images/awsDev.png" alt="aws Certified" width={18} height={18} />
+          <Image src="/images/awsDev.png" alt="aws Certified" width={18} height={18} />
     
       </div>
       <div className='hidden lg:flex text-xs font-sora text-neutral-600 hover:text-neutral-700 dark:text-neutral-500 dark:hover:text-neutral-400 transition-all duration-300'>

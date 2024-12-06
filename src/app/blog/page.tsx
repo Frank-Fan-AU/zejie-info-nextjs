@@ -1,7 +1,4 @@
 import Container from '@/common/components/elements/Container';
-import client from '@/common/libs/contentful/client';
-import BlogCardNew from './_components/BlogCardNew';
-import { getBlogItems } from '@/common/libs/blog';
 import { getAllPosts } from '@/common/libs/api';
 
 

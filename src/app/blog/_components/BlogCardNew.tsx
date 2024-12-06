@@ -36,7 +36,6 @@ const BlogCardNew = ({
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const readingTimeMinutes = calculateReadingTime(content?.rendered) ?? 0;
-  const tagList = tags_list || [];
 
   const defaultImage = '/images/placeholder.png';
 

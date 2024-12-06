@@ -82,7 +82,7 @@ export const UI_STACKS: stacksProps = {
   'shadcn/ui': (
     <SiShadcnui size={iconSize} />
   ),
-  'Aceternity UI':(<img 
+  'Aceternity UI':(<Image 
     src="/icons/aceternity.png" 
     alt="aceternity" 
     width={iconSize} 

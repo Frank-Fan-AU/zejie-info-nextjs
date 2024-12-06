@@ -3,7 +3,6 @@ import { ReactNode } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-import CodeBlock from './CodeBlock';
 
 interface MarkdownRendererProps {
   children: string;
@@ -49,7 +48,6 @@ const MDXComponent = ({ children }: MarkdownRendererProps) => {
         ol: ({  ...props }) => (
           <ol className='list-decimal space-y-3 pb-2 pl-10' {...props} />
         ),
-        code: (props) => <CodeBlock {...props} />,
         blockquote: (props) => (
           <blockquote
             className='rounded-br-2xl border-l-[5px] border-neutral-700 border-l-cyan-500 bg-neutral-200 py-3 pl-6  text-lg font-medium text-cyan-800 dark:bg-neutral-800 dark:text-cyan-200'
