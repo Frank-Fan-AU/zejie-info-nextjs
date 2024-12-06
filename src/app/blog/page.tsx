@@ -1,14 +1,13 @@
 import Container from '@/common/components/elements/Container';
-import { getAllPosts } from '@/common/libs/api';
+// import { getAllPosts } from '@/common/libs/api';
 
 
 
 
 const Blog = async() => {
   // 从 Contentful 获取博客文章
-  const allPosts = await getAllPosts(false);
+  // const allPosts = await getAllPosts(false);
 
-  console.log(allPosts);
     return (
         <>
       

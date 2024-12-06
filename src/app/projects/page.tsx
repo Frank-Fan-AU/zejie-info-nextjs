@@ -30,7 +30,7 @@ const Project = () => {
       <Container data-aos='fade-up'>
         <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
         <Projects
-          projects={projects.slice(0, visibleProjects)}
+          projects={projects}
           loadMore={loadMore}
           hasMore={hasMore}
         />
