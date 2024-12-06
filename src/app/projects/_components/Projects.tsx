@@ -1,34 +1,29 @@
-import { motion } from 'framer-motion';
+'use client';
+
+import { useState } from 'react';
+import { ProjectItemProps } from '@/common/types/projects';
 import InfiniteScroll from 'react-infinite-scroll-component';
-
-import EmptyState from '@/common/components/elements/EmptyState';
-import { ProjectsProps } from '@/common/types/projects';
-
+import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-
-interface ProjectsComponentProps {
-  projects: ProjectsProps['projects'];
-  loadMore: () => void;
-  hasMore: boolean;
+interface ProjectsProps {
+  projects: ProjectItemProps[];
 }
 
-const Projects = ({ projects, loadMore, hasMore }: ProjectsComponentProps) => {
-  const filteredProjects = projects.filter((project) => project?.is_show);
-
-  if (filteredProjects.length === 0) {
-    return <EmptyState message='No Data' />;
-  }
+const Projects = ({ projects }: ProjectsProps) => {
+  const [visibleProjects, setVisibleProjects] = useState(6);
+  const loadMore = () => setVisibleProjects((prev) => prev + 2);
+  const hasMore = visibleProjects < projects.length;
 
   return (
     <InfiniteScroll
-      dataLength={filteredProjects.length}
+      dataLength={visibleProjects}
       next={loadMore}
       hasMore={hasMore}
       loader={<h4>Loading...</h4>}
       style={{ overflow: 'hidden' }}
     >
       <div className='grid gap-5 px-1 pt-2 sm:grid-cols-2'>
-        {filteredProjects.map((project, index) => (
+        {projects.slice(0, visibleProjects).map((project, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.8 }}
