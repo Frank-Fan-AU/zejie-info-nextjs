@@ -74,7 +74,7 @@ const Calendar = ({ data }: CalendarProps) => {
           ))}
         </ul>
 
-        <div className='flex justify-start gap-[3px] overflow-hidden'>
+        <div className='flex justify-end gap-[3px] overflow-hidden md:justify-start'>
           {weeks?.map((week) => (
             <div key={week.firstDay}>
               {week.contributionDays.map((contribution) => {
