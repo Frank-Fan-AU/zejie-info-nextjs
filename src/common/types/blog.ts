@@ -11,7 +11,7 @@ export type BlogItemProps = {
   date: string;
   author: AuthorProps;
   excerpt: string;
-  tags_list: string[];
+  tagsList: string[];
   coverImage: any;
   content: any;
 };
@@ -46,7 +46,7 @@ export const mapContentfulToBlogItem = (entry: Entry<any>): BlogItemProps => {
       }
     },
     excerpt: fields.excerpt as string,
-    tags_list: (fields.tags_list as string[]) || [],
+    tagsList: (fields.tagsList as string[]) || [],
     coverImage: fields.coverImage,
     content: fields.content,
   };

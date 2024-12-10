@@ -29,7 +29,7 @@ const BlogCardNew = ({
   date,
   author,
   excerpt,
-  tags_list,
+  tagsList,
   content,
   coverImage,
 }: BlogCardProps) => {
@@ -43,18 +43,19 @@ const BlogCardNew = ({
     hidden: { opacity: 0, y: -10 },
     visible: { opacity: 1, y: 0 },
   };
+  console.log(tagsList);
 
   return (
     <Link href={`/blog/${slug}`}>
       <Card
-        className='group relative flex h-[400px] w-full flex-col rounded-lg border shadow-sm dark:border-neutral-800'
+        className='group relative flex h-[320px] w-full flex-col rounded-lg border shadow-sm dark:border-neutral-800'
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <div
           className='relative rounded-xl duration-500'
           style={{
-            height: '400px',
+            height: '280px',
             overflow: 'hidden',
           }}
         >
@@ -68,17 +69,18 @@ const BlogCardNew = ({
           <div className='absolute inset-0 bg-gradient-to-b from-black/20 to-black opacity-80 transition-opacity duration-300'></div>
         </div>
 
-        <div className='absolute flex h-full flex-col justify-between space-y-4 p-5'>
+        <div className='absolute flex h-full w-full flex-col justify-between space-y-4 p-5'>
           <div className='flex flex-wrap gap-2'>
-            {/* {tagList?.map((tag) => (
+            {tagsList?.map((tag,index) => (
               <div
-                key={tag?.term_id}
+                key={index}
                 className='rounded-full bg-neutral-900/50 px-2.5 py-1 font-mono text-xs text-neutral-400'
               >
-                <span className='mr-1 font-semibold'>#</span>
-                {tag?.name.charAt(0).toUpperCase() + tag?.name.slice(1)}
+                <span className='mr-1 font-semibold'>#{tag}</span>
+              
               </div>
-            ))} */}
+            ))}
+            
           </div>
 
           <div className='flex flex-col justify-end'>
