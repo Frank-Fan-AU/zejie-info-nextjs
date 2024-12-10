@@ -1,9 +1,8 @@
-const About = () => {
+import About from "./_components/About";
+const AboutPage = () => {
   return (
-    <div>
-      <h1>About developing... I will put my resume here and some other information about me</h1>
-    </div>
+    <About/>
   )
 }
 
-export default About;
+export default AboutPage;
