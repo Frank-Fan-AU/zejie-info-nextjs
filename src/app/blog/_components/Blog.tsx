@@ -11,7 +11,6 @@ const Blog = () => {
  const [blogData, setBlogData] = useState<BlogItemProps[]>([]);
  const fetchBlogData = async () => {
   const blogData = await getAllPosts(false);
-  console.log(blogData);
   setBlogData(blogData);
  }
 useEffect(() => {

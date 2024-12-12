@@ -2,6 +2,14 @@ import { MenuItemProps } from '../types/menu';
 import { BiRocket as ContactIcon } from 'react-icons/bi';
 
 import {
+  BsEnvelopeAtFill as EmailIcon,
+  BsGithub as GithubIcon,
+  BsInstagram as InstagramIcon,
+  BsLinkedin as LinkedinIcon,
+  BsTwitter as TwitterIcon,
+} from 'react-icons/bs';
+
+import {
   FiBookOpen as LearnIcon,
   FiCoffee as ProjectIcon,
   FiCpu as DashboardIcon,
@@ -97,5 +105,59 @@ export const MENU_APPS: MenuItemProps[] = [
       isExternal: false,
       eventName: 'Pages: Playground',
       type: 'Pages',
+    },
+  ];
+
+  export const SOCIAL_MEDIA: MenuItemProps[] = [
+    {
+      title: 'Email',
+      href: 'mailto:aulianza.dev@gmail.com',
+      icon: <EmailIcon size={iconSize} />,
+      isShow: true,
+      isExternal: true,
+      eventName: 'Contact: Email',
+      className: '!bg-green-600 border border dark:border-neutral-700',
+      type: 'Link',
+    },
+  
+    {
+      title: 'Linkedin',
+      href: 'https://www.linkedin.com/in/aulianza/',
+      icon: <LinkedinIcon size={iconSize} />,
+      isShow: true,
+      isExternal: true,
+      eventName: 'Social: Linkedin',
+      className: '!bg-blue-500 border border dark:border-neutral-700',
+      type: 'Link',
+    },
+    {
+      title: 'Twitter',
+      href: 'https://twitter.com/aulianzaa',
+      icon: <TwitterIcon size={iconSize} />,
+      isShow: true,
+      isExternal: true,
+      eventName: 'Social: Twitter',
+      className: '!bg-sky-500 border border dark:border-neutral-700',
+      type: 'Link',
+    },
+    {
+      title: 'Instagram',
+      href: 'https://instagram.com/aulianza',
+      icon: <InstagramIcon size={iconSize} />,
+      isShow: true,
+      isExternal: true,
+      eventName: 'Social: Instagram',
+      className: '!bg-orange-700 border border dark:border-neutral-700',
+      type: 'Link',
+    },
+    {
+      title: 'Github',
+      href: 'https://github.com/aulianza',
+      icon: <GithubIcon size={iconSize} />,
+      isShow: true,
+      isExternal: true,
+      eventName: 'Social: Github',
+      className: '!bg-black border border dark:border-neutral-700',
+      type: 'Link',
     },
   ];

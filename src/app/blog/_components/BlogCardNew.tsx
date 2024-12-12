@@ -30,12 +30,12 @@ const BlogCardNew = ({
   author,
   excerpt,
   tagsList,
-  content,
   coverImage,
+  contentText,
 }: BlogCardProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
-  const readingTimeMinutes = calculateReadingTime(content?.rendered) ?? 0;
+  const readingTimeMinutes = calculateReadingTime(contentText) ?? 0;
 
   const defaultImage = '/images/placeholder.png';
 
