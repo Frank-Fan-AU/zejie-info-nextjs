@@ -58,15 +58,15 @@ export const MENU_ITEMS: MenuItemProps[] = [
       eventName: 'Pages: Blog',
       type: 'Pages',
     },
-    {
-      title: 'Learn',
-      href: '/learn',
-      icon: <LearnIcon size={iconSize} />,
-      isShow: true,
-      isExternal: false,
-      eventName: 'Pages: Learn',
-      type: 'Pages',
-    },
+    // {
+    //   title: 'Learn',
+    //   href: '/learn',
+    //   icon: <LearnIcon size={iconSize} />,
+    //   isShow: true,
+    //   isExternal: false,
+    //   eventName: 'Pages: Learn',
+    //   type: 'Pages',
+    // },
     {
       title: 'About',
       href: '/about',
@@ -111,7 +111,7 @@ export const MENU_APPS: MenuItemProps[] = [
   export const SOCIAL_MEDIA: MenuItemProps[] = [
     {
       title: 'Email',
-      href: 'mailto:aulianza.dev@gmail.com',
+      href: 'mailto:fanzejiea@gmail.com',
       icon: <EmailIcon size={iconSize} />,
       isShow: true,
       isExternal: true,
@@ -122,7 +122,7 @@ export const MENU_APPS: MenuItemProps[] = [
   
     {
       title: 'Linkedin',
-      href: 'https://www.linkedin.com/in/aulianza/',
+      href: 'https://www.linkedin.com/in/fanzejie/',
       icon: <LinkedinIcon size={iconSize} />,
       isShow: true,
       isExternal: true,
@@ -130,29 +130,10 @@ export const MENU_APPS: MenuItemProps[] = [
       className: '!bg-blue-500 border border dark:border-neutral-700',
       type: 'Link',
     },
-    {
-      title: 'Twitter',
-      href: 'https://twitter.com/aulianzaa',
-      icon: <TwitterIcon size={iconSize} />,
-      isShow: true,
-      isExternal: true,
-      eventName: 'Social: Twitter',
-      className: '!bg-sky-500 border border dark:border-neutral-700',
-      type: 'Link',
-    },
-    {
-      title: 'Instagram',
-      href: 'https://instagram.com/aulianza',
-      icon: <InstagramIcon size={iconSize} />,
-      isShow: true,
-      isExternal: true,
-      eventName: 'Social: Instagram',
-      className: '!bg-orange-700 border border dark:border-neutral-700',
-      type: 'Link',
-    },
+
     {
       title: 'Github',
-      href: 'https://github.com/aulianza',
+      href: 'https://github.com/FanZejie',
       icon: <GithubIcon size={iconSize} />,
       isShow: true,
       isExternal: true,
