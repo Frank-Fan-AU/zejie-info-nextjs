@@ -7,7 +7,7 @@ interface BlogDetailPageProps {
   params: { slug: string }; // 动态路由参数
 }
 
-const BlogDetailPage = async ({ params }: BlogDetailPageProps) => {
+const BlogDetailPage = async ({ params }:  Awaited<BlogDetailPageProps>) => {
   const { slug } = params;
   // 获取特定博客数据
   const blog = await fetchContentByName(slug);
