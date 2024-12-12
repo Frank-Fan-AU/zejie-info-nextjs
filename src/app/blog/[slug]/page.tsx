@@ -3,12 +3,10 @@ import Container from '@/common/components/elements/Container';
 import MDXComponent from '@/common/components/elements/MDXComponent';
 import PageHeading from '@/common/components/elements/PageHeading';
 import { fetchContentByName } from '@/common/libs/api';
-interface BlogDetailPageProps {
-  params: { slug: string }; // 动态路由参数
-}
 
-const BlogDetailPage = async ({ params }:  Awaited<BlogDetailPageProps>) => {
-  const { slug } = params;
+
+const BlogDetailPage = async ({ params }: {params:Promise<{slug:string}>}) => {
+  const slug = (await params).slug
   // 获取特定博客数据
   const blog = await fetchContentByName(slug);
 
