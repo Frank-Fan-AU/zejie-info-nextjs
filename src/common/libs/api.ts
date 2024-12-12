@@ -13,10 +13,9 @@ const BLOG_GRAPHQL_FIELDS = `
     }
   }
   excerpt
-  content {
-    json
-  }
+  contentText
 `;
+
 async function fetchGraphQL(query: string, preview = false): Promise<any> {
     return fetch(
       `https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
@@ -24,11 +23,7 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${
-            preview
-              ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
-              : process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
-          }`,
+          Authorization: `Bearer ${ process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
         },
         body: JSON.stringify({ query }),
       }
@@ -54,3 +49,35 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
     );
     return extractBlogEntries(entries);
   }
+
+  export const fetchContentByName = async (slug:string) => {
+    const ACCESS_TOKEN = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
+    const ENDPOINT = `https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`;
+  
+    const query = `
+      query GetContentByName($slug: String!) {
+        blogCollection(where: { slug: $slug }, limit: 1) {
+          items {
+            title
+            contentText
+            excerpt
+          }
+        }
+      }
+    `;
+  
+    const response = await fetch(ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${ACCESS_TOKEN}`,
+      },
+      body: JSON.stringify({
+        query,
+        variables: { slug },
+      }),
+    });
+  
+    const {data} = await response.json();
+    return data.blogCollection.items[0];
+  };

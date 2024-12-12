@@ -13,7 +13,7 @@ export type BlogItemProps = {
   excerpt: string;
   tagsList: string[];
   coverImage: any;
-  content: any;
+  contentText: string;
 };
 
 
@@ -48,6 +48,6 @@ export const mapContentfulToBlogItem = (entry: Entry<any>): BlogItemProps => {
     excerpt: fields.excerpt as string,
     tagsList: (fields.tagsList as string[]) || [],
     coverImage: fields.coverImage,
-    content: fields.content,
+    contentText: fields.contentText as string,
   };
 };

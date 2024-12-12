@@ -3,13 +3,14 @@ import { ReactNode } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
+import CodeBlock from './CodeBlock';
 
 interface MarkdownRendererProps {
   children: string;
 }
 
 interface TableProps {
-  children?: ReactNode;
+  children: ReactNode;
 }
 
 const Table = ({ children }: TableProps) => (
@@ -42,12 +43,13 @@ const MDXComponent = ({ children }: MarkdownRendererProps) => {
             {...props}
           />
         ),
-        ul: ({ ...props }) => (
+        ul: ({ ordered, ...props }) => (
           <ul className='list-disc space-y-3 pb-2 pl-10' {...props} />
         ),
-        ol: ({  ...props }) => (
+        ol: ({ ordered, ...props }) => (
           <ol className='list-decimal space-y-3 pb-2 pl-10' {...props} />
         ),
+        code: (props) => <CodeBlock {...props} />,
         blockquote: (props) => (
           <blockquote
             className='rounded-br-2xl border-l-[5px] border-neutral-700 border-l-cyan-500 bg-neutral-200 py-3 pl-6  text-lg font-medium text-cyan-800 dark:bg-neutral-800 dark:text-cyan-200'
