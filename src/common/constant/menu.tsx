@@ -4,20 +4,17 @@ import { BiRocket as ContactIcon } from 'react-icons/bi';
 import {
   BsEnvelopeAtFill as EmailIcon,
   BsGithub as GithubIcon,
-  BsInstagram as InstagramIcon,
   BsLinkedin as LinkedinIcon,
-  BsTwitter as TwitterIcon,
 } from 'react-icons/bs';
 
 import {
-  FiBookOpen as LearnIcon,
   FiCoffee as ProjectIcon,
   FiCpu as DashboardIcon,
   FiPocket as HomeIcon,
   FiRss as BlogIcon,
   FiUser as ProfileIcon,
 } from 'react-icons/fi';
-import { SiJavascript } from 'react-icons/si';
+import { TbTools } from "react-icons/tb";
 
 const iconSize = 20;
 
@@ -97,13 +94,22 @@ export const MENU_ITEMS: MenuItemProps[] = [
   ];
 
 export const MENU_APPS: MenuItemProps[] = [
+    // {
+    //   title: 'JS Playground',
+    //   href: '/playground',
+    //   icon: <SiJavascript size={iconSize} />,
+    //   isShow: true,
+    //   isExternal: false,
+    //   eventName: 'Pages: Playground',
+    //   type: 'Pages',
+    // },
     {
-      title: 'JS Playground',
-      href: '/playground',
-      icon: <SiJavascript size={iconSize} />,
+      title: 'DevLibrary',
+      href: '/deblibrary',
+      icon: <TbTools size={iconSize} />,
       isShow: true,
       isExternal: false,
-      eventName: 'Pages: Playground',
+      eventName: 'Pages: DevLibrary',
       type: 'Pages',
     },
   ];
