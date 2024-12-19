@@ -55,7 +55,7 @@ const BlogCardNew = ({
         <div
           className='relative rounded-xl duration-500'
           style={{
-            height: '280px',
+            height: '320px',
             overflow: 'hidden',
           }}
         >

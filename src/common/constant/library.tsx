@@ -76,4 +76,16 @@ export const UI_LIBRARY: LibraryProps[] = [
         link: 'https://echarts.apache.org/examples/zh/',
         image: <SiApacheecharts size={iconSize} />
     },
+    {
+      title: 'G6',
+      description: 'Graph Visualization Engine',
+      link: 'https://g6.antv.vision/',
+      image: <Image
+      src="/icons/g6.png" 
+      alt="G6" 
+      width={iconSize} 
+      height={iconSize}
+      style={{ display: 'inline' }}
+    />
+  },
 ];

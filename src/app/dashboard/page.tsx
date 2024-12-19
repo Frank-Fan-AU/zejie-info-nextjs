@@ -5,7 +5,7 @@ import Breakline from '@/common/components/elements/Breakline';
 
 const PAGE_TITLE = 'Dashboard';
 const PAGE_DESCRIPTION =
-  'This is my personal dashboard,Fetching data from Github API by GraphQL.';
+  'This is my personal dashboard, Fetching data from Github API by GraphQL.';
 
 const DashboardPage = () => {
   return (
