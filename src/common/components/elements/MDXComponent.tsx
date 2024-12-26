@@ -31,6 +31,12 @@ const MDXComponent = ({ children }: MarkdownRendererProps) => {
           />
         ),
         p: (props) => <div {...props} />,
+        h1: (props) => (
+          <h1
+            className='text-2xl font-medium dark:text-neutral-300'
+            {...props}
+          />
+        ),
         h2: (props) => (
           <h2
             className='text-xl font-medium dark:text-neutral-300'
