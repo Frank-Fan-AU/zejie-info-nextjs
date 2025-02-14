@@ -87,7 +87,6 @@ export const UI_STACKS: stacksProps = {
     alt="aceternity" 
     width={iconSize} 
     height={iconSize}
-    style={{ display: 'inline' }}
   />),
   'Ant Design': (
     <Image 
@@ -95,7 +94,6 @@ export const UI_STACKS: stacksProps = {
     alt="antd" 
     width={iconSize} 
     height={iconSize}
-    style={{ display: 'inline' }}
   />
   ),
   'Element UI': (
@@ -104,7 +102,6 @@ export const UI_STACKS: stacksProps = {
     alt="ElementUI" 
     width={iconSize} 
     height={iconSize}
-    style={{ display: 'inline' }}
   />
   ),
   Echarts: (
@@ -117,7 +114,6 @@ export const UI_STACKS: stacksProps = {
       alt="AntV" 
       width={iconSize} 
       height={iconSize}
-      style={{ display: 'inline' }}
     />
   ),
 };
