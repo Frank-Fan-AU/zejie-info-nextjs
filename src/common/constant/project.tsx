@@ -25,5 +25,17 @@ export const PROJECT_ITEMS: ProjectItemProps[] = [
     is_featured: false,
     updated_at: new Date("2024-03-15")
   },
+  {
+    title: "Monitor Data Screen",
+    slug: "datascreen",
+    description: "This project offers a 12-screen platform for O&M personnel, featuring real-time data visualization with customizable layouts and interactive charts.",
+    image: "/images/projectImages/sparkwithmask.png",
+    link_demo: "https://master.d198b3fe2208q6.amplifyapp.com",
+    link_github: "https://github.com/FanZejie/mobile-web-vue2",
+    stacks: "Vue.js,TailwindCSS,Ant Design,Element UI,AntV|G6",
+    is_show: true,
+    is_featured: false,
+    updated_at: new Date("2025-02-25")
+  },
 ];
 
