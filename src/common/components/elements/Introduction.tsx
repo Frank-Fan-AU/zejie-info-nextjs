@@ -9,9 +9,9 @@ const Introduction = () => {
           <div className='space-y-4'>
             <ul className='ml-5 flex list-disc flex-col gap-1 text-neutral-700 dark:text-neutral-400 lg:flex-row lg:gap-10'>
               <li>
-                Based in China, BeiJing <span className='ml-1'>🇨🇳</span>
+                Based in Adelaide, Australia <span className='ml-1'>🇦🇺</span>
               </li>
-              <li>Working onsite</li>
+              <li>Seeking new job opportunities</li>
             </ul>
           </div>
         </div>
@@ -23,9 +23,10 @@ const Introduction = () => {
           deliver efficient, scalable, and visually appealing web applications.
           
         </p>
-        <p className='mt-4 leading-[1.8] text-neutral-800 dark:text-neutral-300 md:leading-loose'>
+        <p className='mt-6 leading-[1.8] text-neutral-800 dark:text-neutral-300 md:leading-loose'>Work Rights: Australian temporary visa with no restrictions (e.g., doctoral student visa).</p>
+        {/* <p className='mt-4 leading-[1.8] text-neutral-800 dark:text-neutral-300 md:leading-loose'>
         I am currently learning Web3 technologies and aspire to pursue a career in Web3 development. If you have entry-level Web3 development opportunities, feel free to reach out to me.
-        </p>
+        </p> */}
       </section>
     );
   };
