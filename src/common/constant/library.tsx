@@ -89,3 +89,18 @@ export const UI_LIBRARY: LibraryProps[] = [
     />
   },
 ];
+
+export const UTIL_LIBRARY: LibraryProps[] = [
+  {
+    title: 'I Love Img',
+    description: 'Handle images',
+    link: 'https://www.iloveimg.com/zh-cn',
+    image: <Image
+    src="/icons/iloveimg.svg" 
+    alt="antd" 
+    width={iconSize} 
+    height={iconSize}
+    style={{ display: 'inline',backgroundColor:'white' }}
+  />
+},
+]
