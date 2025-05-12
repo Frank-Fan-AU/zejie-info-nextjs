@@ -3,7 +3,7 @@ const Introduction = () => {
       <section className='bg-cover bg-no-repeat '>
         <div className='space-y-3'>
           <div className='flex gap-2  text-2xl font-medium lg:text-3xl'>
-            <h1>Hi, I&apos;m ZeJie</h1>{' '}
+            <h1>Hi, I&apos;m Frank</h1>{' '}
             <div className='ml-1 animate-waving-hand'>👋</div>
           </div>
           <div className='space-y-4'>

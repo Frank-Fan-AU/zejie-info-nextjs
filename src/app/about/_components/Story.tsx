@@ -9,7 +9,7 @@ const Story = () => {
           Hello! Thanks for stopping by my personal website.
         </p>
         <p>
-          I'm ZeJie. I've been working in web development for over 4 years, doing both the frontend and the backend. But what really gets me excited is making websites and apps that are easy for everyone to use and look good too!
+          I'm Frank. I've been working in web development for over 4 years, doing both the frontend and the backend. But what really gets me excited is making websites and apps that are easy for everyone to use and look good too!
         </p>
         <p>
           I'm really into JavaScript and TypeScript, which are languages used to build websites. I also know a bunch of frameworks that make building websites even easier, like React, Vue, Node.js, and Java frameworks like SpringBoot. I love learning about new web tools and features.
@@ -30,7 +30,7 @@ const Story = () => {
 
       <div className='space-y-4 flex flex-col'>
         <span>Best Regards,</span>
-        <span>ZeJie Fan</span>
+        <span>Frank Fan</span>
         {/* <Image
           src='/images/signature.png'
           width={150}

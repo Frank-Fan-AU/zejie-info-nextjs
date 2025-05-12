@@ -5,6 +5,9 @@ import SocialMediaList from "./SocialMediaList";
 const Contact = () => {
     return(
         <section className='space-y-6'>
+                <h3 className='text-lg font-medium'>Phone</h3>
+                <p>+61 411936898</p>
+                <Breakline />
       <SocialMediaList />
       <Breakline />
       <div className='space-y-5'>

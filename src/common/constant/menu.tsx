@@ -128,7 +128,7 @@ export const MENU_APPS: MenuItemProps[] = [
   
     {
       title: 'Linkedin',
-      href: 'https://www.linkedin.com/in/fanzejie/',
+      href: 'https://www.linkedin.com/in/frankfanau/',
       icon: <LinkedinIcon size={iconSize} />,
       isShow: true,
       isExternal: true,
@@ -139,7 +139,7 @@ export const MENU_APPS: MenuItemProps[] = [
 
     {
       title: 'Github',
-      href: 'https://github.com/FanZejie',
+      href: 'https://github.com/Frank-Fan-AU',
       icon: <GithubIcon size={iconSize} />,
       isShow: true,
       isExternal: true,

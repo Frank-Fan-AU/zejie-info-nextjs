@@ -19,7 +19,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
     >
       <Image
         src='/images/avator.png'
-        alt='Zejie Fan'
+        alt='Frank Fan'
         width={expandMenu ? 80 : imageSize}
         height={expandMenu ? 80 : imageSize}
         rounded='rounded-full'
@@ -29,7 +29,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
       <div className='flex gap-2 items-center mt-1 lg:mt-4'>
         <Link href='/' passHref>
           <h2 className='flex-grow text-lg lg:text-xl font-sora font-medium'>
-            ZeJie
+            Frank
           </h2>
         </Link>
           <Image src="/images/awsDev.png" alt="aws Certified" width={18} height={18} />

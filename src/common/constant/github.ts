@@ -7,7 +7,7 @@ export const GITHUB_ACCOUNTS = [
   //   is_active: true,
   // },
   {
-    username: 'FanZejie',
+    username: 'Frank-Fan-AU',
     token: process.env.NEXT_PUBLIC_GITHUB_TOKEN,
     endpoint: '/api/github',
     type: 'personal',
