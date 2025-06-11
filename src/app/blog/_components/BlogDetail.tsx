@@ -19,7 +19,6 @@ const BlogDetail = (
     const filePath = path.join(docDir, `${slug}.mdx`);
     const source = fs.readFileSync(filePath, 'utf8');
     const { content } = matter(source);
-    console.log(content);
   return (
     <div className='space-y-8'>
       {image && (
