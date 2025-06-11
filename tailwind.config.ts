@@ -1,10 +1,14 @@
 import {nextui} from '@nextui-org/theme';
 import scrollbarHide from 'tailwind-scrollbar-hide';
+import type { Config } from "tailwindcss";
 
-module.exports = {
+const config: Config = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: 'class',
   theme: {
@@ -54,7 +58,13 @@ module.exports = {
         'badge-pulse': 'badge 1.5s ease-out infinite',
         'looping-tag': 'loop 80s linear infinite',
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
     },
   },
-  plugins: [scrollbarHide,nextui()],
+  plugins: [scrollbarHide,nextui(), require("@tailwindcss/typography")],
 };
+export default config;

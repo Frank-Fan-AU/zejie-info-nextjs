@@ -1,21 +1,21 @@
-import Container from '@/common/components/elements/Container';
-import Blog from './_components/Blog';
+import { BLOG_ITEMS } from "@/common/constant/blog";
+import BlogList from "@/app/blog/_components/BlogList";
 import PageHeading from '@/common/components/elements/PageHeading';
+import Container from '@/common/components/elements/Container';
 
 const PAGE_TITLE = 'Blogs';
 const PAGE_DESCRIPTION =
-  'Study Blog powered by contentful, a headless CMS';
+  'My technical blog and thoughts';
 
+export default async function BlogPage() {
+  const blogs = BLOG_ITEMS;
 
-const BlogPage = async () => {
   return (
     <>
-      <Container className='xl:!-mt-5' data-aos='fade-up'>
-      <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
-        <Blog />
+      <Container data-aos='fade-up'>
+        <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+        <BlogList blogs={blogs} />
       </Container>
     </>
   );
-};
-
-export default BlogPage;
+} 
