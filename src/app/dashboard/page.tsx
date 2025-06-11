@@ -13,7 +13,7 @@ const DashboardPage = () => {
     <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
     <Dashboard />
     <Breakline className='mb-8 mt-10' />
-    <p className='dark:text-neutral-400'>I have many other contributions beyond what is shown in the dashboard; however, some are in the company’s private GitLab repository, and others are private projects with code that cannot be made public.</p>
+    <p className='dark:text-neutral-400'>I move to Australia in March 2025, I was very busy in those days, so you can see it's blank in March. 😂</p>
   </Container>
   );
 };
