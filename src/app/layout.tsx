@@ -4,7 +4,8 @@ import { ThemeProvider } from 'next-themes';
 import localFont from "next/font/local";
 import "./globals.css";
 import Layout from "@/common/components/layouts";
-
+import { title, description, image } from '@/common/constant/siteInfo';
+import { keywords } from '@/common/constant/siteInfo';
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -17,8 +18,36 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Frank's website",
-  description: "Record my tech stack, projects and blogs",
+  title,
+  description,
+  keywords,
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
+  openGraph:{
+    type: "website",
+    title,
+    description,
+    url: process.env.NEXT_PUBLIC_BASE_URL!,
+    siteName: title,
+    images: [
+      {
+        url: image,
+        width: 1200,
+        height: 630,
+        alt: title,
+        type: "image/jpg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [image],
+  },
+  icons: {
+    icon: "/images/image.png",
+  },
+
 };
 
 export default function RootLayout({

@@ -5,6 +5,11 @@ import BackButton from "@/common/components/elements/BackButton";
 import BlogDetail from "../_components/BlogDetail";
 
 
+export async function generateStaticParams() {
+    return BLOG_ITEMS.map((blog) => ({
+        slug: blog.slug,
+    }));
+  }
 
 const BlogDetailPage = async ({ params }: {params:Promise<{slug:string}>}) => {
     const slug = (await params).slug
