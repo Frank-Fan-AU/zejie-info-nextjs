@@ -12,7 +12,7 @@ async function getLastModifiedDate(filePath: string): Promise<Date> {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const pageRoutes = ["", "about"];
+  const pageRoutes = ["", "about", "blog", "projects", "contact"];
   const staticRoutes = await Promise.all(
     pageRoutes.map(async (pageRoute) => {
       const lastModified = await getLastModifiedDate(
@@ -26,13 +26,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
   );
 
-  const artistPageLastModified = await getLastModifiedDate(
-    "src/app/artists/[id]/page.tsx"
-  );
-  const blogRoutes = BLOG_ITEMS.map(({ slug }) => {
+  const blogRoutes = BLOG_ITEMS.map(({ slug, updated_at }) => {
     return {
       url: `${BASE_URL}/blog/${slug}`,
-      lastModified: artistPageLastModified,
+      lastModified: updated_at,
     };
   });
 
