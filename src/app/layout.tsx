@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from "next";
 import { ThemeProvider } from 'next-themes';
 import localFont from "next/font/local";
@@ -34,6 +35,7 @@ export default function RootLayout({
          <Layout>
               {children}
             </Layout>
+            <Analytics />
          </ThemeProvider>
 
       </body>
