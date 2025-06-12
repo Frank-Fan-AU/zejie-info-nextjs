@@ -47,13 +47,25 @@ const MDXComponent = ({ children }: MarkdownRendererProps) => {
             {...props}
           />
         ),
-        ul: ({ ordered, ...props }) => (
+        ul: (props) => (
           <ul className='mb-4 list-disc space-y-3 pb-2 pl-10' {...props} />
         ),
-        ol: ({ ordered, ...props }) => (
+        ol: (props) => (
           <ol className='mb-4 list-decimal space-y-3 pb-2 pl-10' {...props} />
         ),
-        code: (props) => <CodeBlock {...props} />,
+        code: ({ node, inline, className, children, ...props }) => {
+          const match = /language-(\w+)/.exec(className || '');
+          const isInline = !match && !className?.includes('language-');
+          return (
+            <CodeBlock
+              inline={isInline}
+              className={className}
+              {...props}
+            >
+              {String(children)}
+            </CodeBlock>
+          );
+        },
         blockquote: (props) => (
           <blockquote
             className='mb-4 rounded-br-2xl border-l-[5px] border-neutral-700 border-l-cyan-500 bg-neutral-200 py-3 pl-6 text-lg font-medium text-cyan-800 dark:bg-neutral-800 dark:text-cyan-200'
