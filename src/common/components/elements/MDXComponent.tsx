@@ -9,9 +9,22 @@ interface MarkdownRendererProps {
   children: string;
 }
 
-const Table = ({ children }: { children: ReactNode }) => (
+interface TableProps {
+  children?: ReactNode;
+  [key: string]: any;
+}
+
+interface CodeProps {
+  node?: any;
+  inline?: boolean;
+  className?: string;
+  children: ReactNode;
+  [key: string]: any;
+}
+
+const Table = ({ children, ...props }: TableProps) => (
   <div className='overflow-x-auto'>
-    <table className='w-full border-collapse border border-neutral-200 dark:border-neutral-700'>
+    <table className='w-full border-collapse border border-neutral-200 dark:border-neutral-700' {...props}>
       {children}
     </table>
   </div>
@@ -53,7 +66,8 @@ const MDXComponent = ({ children }: MarkdownRendererProps) => {
         ol: (props) => (
           <ol className='mb-4 list-decimal space-y-3 pb-2 pl-10' {...props} />
         ),
-        code: ({ node, inline, className, children, ...props }) => {
+        code: (props: any) => {
+          const { node, inline, className, children } = props;
           const match = /language-(\w+)/.exec(className || '');
           const isInline = !match && !className?.includes('language-');
           return (
