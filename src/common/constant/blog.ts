@@ -18,5 +18,14 @@ export const BLOG_ITEMS: BlogItemProps[] = [
     tags: ["Vercel", "Cloudflare", "Domain"],
     is_featured: false,
     is_show: true,
+  },
+  {
+    title: "Why Tailwind CSS Feels So Right",
+    slug: "why-tailwind-css-feels-so-right",
+    description: "This blog will tell you why Tailwind CSS feels so right",
+    updated_at: new Date("2025-06-19"),
+    tags: ["Tailwind CSS", "CSS", "UI"],
+    is_featured: false,
+    is_show: true,
   }
 ]; 
