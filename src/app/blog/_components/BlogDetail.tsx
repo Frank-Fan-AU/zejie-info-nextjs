@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Image from '@/common/components/elements/Image';
-
-
+import GiscusComments from '@/common/components/elements/Giscus';
+import { GISCUS_CONFIG } from '@/common/constant/giscus';
 import MDXComponent from '@/common/components/elements/MDXComponent';
 import { BlogItemProps } from '@/common/types/blog';
 
@@ -35,6 +35,12 @@ const BlogDetail = (
           <MDXComponent>{content}</MDXComponent>
         </div>
       )}
+      
+      {/* 评论系统 */}
+      <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <h3 className="text-xl font-semibold mb-6 dark:text-white">评论</h3>
+        <GiscusComments {...GISCUS_CONFIG} />
+      </div>
     </div>
   );
 };
